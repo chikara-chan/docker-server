@@ -1,6 +1,7 @@
 FROM ubuntu:16.04
 
 RUN apt-get update && apt-get install -y \
+    git \
     python-pip \
  && pip install git+https://github.com/shadowsocks/shadowsocks.git@master
 
