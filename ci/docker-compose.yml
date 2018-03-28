@@ -14,7 +14,7 @@ services:
     ports:
       - 20255:20255
     volumes:
-      - shadowsocks:/var/log/shadowsocks.log
+      - shadowsocks:/var/log
 volumes:
   jenkins:
   shadowsocks:
