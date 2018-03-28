@@ -1,6 +1,6 @@
-FROM jenkinsci/blueocean:1.4.2
+FROM jenkins/jenkins:lts
 
-RUN apt-get update && apt-get install -y --no-install-recommends usermod
+USER root
 
 RUN usermod -aG docker $USER
 
