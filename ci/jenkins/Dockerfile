@@ -1,7 +1,9 @@
-FROM jenkins/jenkins:lts
+FROM jenkins/jenkins:lts-slim
 
 USER root
 
-RUN usermod -aG docker $USER
+RUN curl -sSL https://get.docker.com/ | sh
 
-RUN ssh-keygen
+USER jenkins
+
+RUN ssh-keygen -f ~/.ssh/id_rsa -t rsa -N ''

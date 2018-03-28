@@ -1,11 +1,20 @@
 version: "3"
 services:
   jenkins:
-    build: jenkins
+    build: 
+      context: jenkins
     ports:
       - 8080:8080
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - jenkins:/var/jenkins_home
+  shadowsocks:
+    build: 
+      context: shadowsocks
+    ports:
+      - 20255:20255
+    volumes:
+      - shadowsocks:/var/log/shadowsocks.log
 volumes:
   jenkins:
+  shadowsocks:
