@@ -8,11 +8,11 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - jenkins:/var/jenkins_home
-  # shadowsocks:
-  #   build: 
-  #     context: shadowsocks
-  #   ports:
-  #     - 20255:20255
+  shadowsocks:
+    build: 
+      context: shadowsocks
+    ports:
+      - 20255:20255
 volumes:
   jenkins:
     
